@@ -1,0 +1,10 @@
+tableWrapper {
+  /* Ensures table scrolls horizontally if content overflows */
+  overflow-x: auto;
+}
+
+.cell {
+  /* Ensures each cell has a minimum width */
+  min-width: 8rem;
+  white-space: nowrap; /* Prevents text from wrapping */
+}

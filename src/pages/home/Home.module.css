@@ -1,0 +1,25 @@
+.homeUl {
+  padding: 0;
+}
+
+.homeli {
+  list-style: none;
+  background: rgba(0, 8, 152, 0.9);
+  max-width: 200px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 1px solid gray;
+  font-size: 18px;
+  padding: 20px 34px;
+  color: white;
+}
+
+.homeli:hover {
+  background: rgba(0, 8, 152, 1);
+}
+
+.homeLink {
+  text-decoration: none;
+}
