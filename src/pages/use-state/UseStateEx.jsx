@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "./UseStateEx.module.css";
+import MyTable from "../../components/MyTable";
 
 export default function UseStateEx() {
   const [students, setStudents] = useState(null);
@@ -17,39 +17,44 @@ export default function UseStateEx() {
   return (
     <>
       {students ? (
-        <div className={`${styles.tableWrapper} table-responsive`}>
-          <table className="table table-striped table-hover table-bordered">
-            <thead className="table-dark">
-              <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Designation</th>
-                <th>Department</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>Status</th>
-                <th>Joining Date</th>
-              </tr>
-            </thead>
-            <tbody>
-              {students.map((student) => (
-                <tr key={student.id}>
-                  <td className={styles.cell}>{student.id}</td>
-                  <td className={styles.cell}>{student.name}</td>
-                  <td className={styles.cell}>{student.designation}</td>
-                  <td className={styles.cell}>{student.department}</td>
-                  <td className={styles.cell}>{student.email}</td>
-                  <td className={styles.cell}>{student.phone}</td>
-                  <td className={styles.cell}>{student.status}</td>
-                  <td className={styles.cell}>{student.joiningDate}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <MyTable columns={columns} dataSource={dataSource} />
       ) : (
         <p>Loading...</p>
       )}
     </>
   );
 }
+
+const columns = [
+  { key: "id", header: "ID" },
+  { key: "name", header: "Name" },
+  { key: "designation", header: "Designation" },
+  { key: "department", header: "Department" },
+  { key: "email", header: "Email" },
+  { key: "phone", header: "Phone" },
+  { key: "status", header: "Status" },
+  { key: "joiningDate", header: "Joining Date" },
+];
+
+const dataSource = [
+  {
+    id: 1,
+    name: "John Doe",
+    designation: "Software Engineer",
+    department: "IT",
+    email: "john.doe@example.com",
+    phone: "+1-123-456-7890",
+    status: "Active",
+    joiningDate: "2023-05-10",
+  },
+  {
+    id: 2,
+    name: "Jane Smith",
+    designation: "Project Manager",
+    department: "Operations",
+    email: "jane.smith@example.com",
+    phone: "+1-987-654-3210",
+    status: "Active",
+    joiningDate: "2022-08-01",
+  },
+];
