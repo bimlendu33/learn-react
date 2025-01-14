@@ -50,7 +50,6 @@ function UseReducerEx() {
     setToDotext("");
   }
 
-  // Edit a Todo
   function handleEdit(id, currentTitle) {
     setEditingId(id);
     setEditText(currentTitle);
@@ -62,7 +61,6 @@ function UseReducerEx() {
     setEditText("");
   }
 
-  // Discard edited Todo
   function discardEdit() {
     setEditingId(null);
     setEditText("");
@@ -119,7 +117,6 @@ function UseReducerEx() {
             </div>
           )}
 
-          {/* Todo List */}
           <ul className="list-group">
             {toDos &&
               toDos.todos.map((item) => (
