@@ -8,8 +8,17 @@ export default function Home() {
         <Link to={"/use-state"} className={styles.homeLink}>
           <li className={styles.homeli}>UseState Ex </li>
         </Link>
-        <Link to={"/use-state"} className={styles.homeLink}>
-          <li className={styles.homeli}>UseState Ex </li>
+        <Link to={"/use-ref-ex"} className={styles.homeLink}>
+          <li className={styles.homeli}>UseRef Ex </li>
+        </Link>
+        <Link to={"/use-reducer-ex"} className={styles.homeLink}>
+          <li className={styles.homeli}>UseReducer Ex </li>
+        </Link>
+        <Link to={"/custom-hook1"} className={styles.homeLink}>
+          <li className={styles.homeli}>Custom Hook1 </li>
+        </Link>
+        <Link to={"/custom-hook2"} className={styles.homeLink}>
+          <li className={styles.homeli}>Custom Hook2 </li>
         </Link>
       </ul>
     </>
